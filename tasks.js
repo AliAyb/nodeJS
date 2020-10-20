@@ -41,14 +41,11 @@ function onDataReceived(text) {
   if (text === 'quit\n' || text === 'exit\n') {
     quit();
   }
-  else if(text === 'hello\n'){
-    hello();
+  else if(text[0] === 'hello'){
+    hello(text[1]);
   }
   else if(text === 'help\n'){
     help();
-  }
-  else if(text[0] === 'hello'){
-    hello(text[1]);
   }
   else{
     unknownCommand(text);
@@ -79,8 +76,16 @@ function hello(){
 
 
 function hello(x){
-  console.log('hello '+x+'!')
-}
+
+    if(x === 'hello'){
+      console.log('hello!')
+    }
+    else{
+      console.log('hello '+x+'!');
+    }
+
+  }
+
 
 /**
  * Exits the application
