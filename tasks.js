@@ -103,7 +103,7 @@ function quit(){
  * @returns {void}
  */
 function help(){
-  console.log('\nquit\nhello\nunknownCommand')
+  console.log('\nquit\nhello or hello name\nunknownCommand\nhelp')
 }
 
 
